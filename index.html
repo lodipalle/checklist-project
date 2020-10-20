@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>My Checklist</title>
+    <title>My Grocery Checklist</title>
     <!-- font-awesome -->
     <link
       rel="stylesheet"
@@ -16,11 +16,30 @@
     <section class="section-center">
       <form class="grocery-form">
         <p class="alert"></p>
-        <h3>My Checklist</h3>
+        <h3>My Grocery Checklist</h3>
         <div class="form-control">
-          <input type="text" id="grocery" placeholder="write a task or an item">
+          <input type="text" id="grocery" placeholder="write a grocery item">
+          <button type="submit" class="submit-btn">
+            submit
+          </button>
         </div>
       </form>
+      <div class="grocery-list">
+        <div class="grocery-items">
+          <article class="grocery-item">
+            <p class="title">Item</p>
+            <div class="btn-container">
+              <button type="button" class="edit-btn">
+                <i class="fas fa-edit"></i>
+              </button>
+              <button type="button" class="delete-btn">
+                <i class="fas fa-trash"></i>
+              </button>
+            </div>
+          </article>
+        </div>
+        <button type="button" class="clear-btn">Clear List</button>
+      </div>
     </section>
     <!-- javascript -->
     <script src="app.js"></script>
