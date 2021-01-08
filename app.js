@@ -18,15 +18,26 @@ form.addEventListener('submit', addItem);
 function addItem(e) {
   e.preventDefault();
   const value = grocery.value;
+
   const id = new Date().getTime().toString();
   if(value && !editFlag) {
     console.log("add item to the list");
   } else if (value && editFlag) {
     console.log("editing");
   } else {
-    alert.textContent = "empty value";
-    alert.classList.add("alet-danger");
+    displayAlert("please enter value", "danger");
   }
+}
+// Display alert
+function displayAlert(text, action) {
+  alert.textContent = text;
+  alert.classList.add(`alet-${action}`);
+
+  // Remove alert
+  setTimeout(function () {
+    alert.textContent = "";
+    alert.classList.remove(`alet-${action}`);  
+  }, 1000)
 }
 // ****** LOCAL STORAGE **********
 
