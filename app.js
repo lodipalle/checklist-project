@@ -21,7 +21,7 @@ function addItem(e) {
 
   const id = new Date().getTime().toString();
   if(value && !editFlag) {
-    console.log("add item to the list");
+    const element = document.createElement("article");
   } else if (value && editFlag) {
     console.log("editing");
   } else {
@@ -37,7 +37,7 @@ function displayAlert(text, action) {
   setTimeout(function () {
     alert.textContent = "";
     alert.classList.remove(`alet-${action}`);  
-  }, 1000)
+  }, 1000);
 }
 // ****** LOCAL STORAGE **********
 
