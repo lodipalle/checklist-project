@@ -1,11 +1,11 @@
 // ****** SELECT ITEMS **********
-const alert = document.querySelector('.alert');
-const form = document.querySelector('.grocery-form');
-const grocery = document.getElementById('grocery');
-const submitBtn = document.querySelector('.submit-btn');
-const container = document.querySelector('.grocery-container');
-const list = document.querySelector('.grocery-list');
-const clearBtn = document.querySelector('.clear-btn');
+const alert = document.querySelector(".alert");
+const form = document.querySelector(".grocery-form");
+const grocery = document.getElementById("grocery");
+const submitBtn = document.querySelector(".submit-btn");
+const container = document.querySelector(".grocery-container");
+const list = document.querySelector(".grocery-list");
+const clearBtn = document.querySelector(".clear-btn");
 
 // edit option
 let editElement;
@@ -13,7 +13,7 @@ let editFlag = false;
 let editID = "";
 // ****** EVENT LISTENERS **********
 // submit form
-form.addEventListener('submit', addItem);
+form.addEventListener("submit", addItem);
 // ****** FUNCTIONS **********
 function addItem(e) {
   e.preventDefault();
@@ -23,7 +23,7 @@ function addItem(e) {
   if(value && !editFlag) {
     const element = document.createElement("article");
     // add class
-    element.classList.add('grocery-item');
+    element.classList.add("grocery-item");
     // add ID
     const attr = document.createAttribute("data-id");
     attr.value = id;
@@ -66,7 +66,10 @@ function displayAlert(text, action) {
 }
 // Set back to default
 function setBackToDefault() {
-  console.log("set back to default");
+  grocery.value = "";
+  editFlag = false;
+  editID = "";
+  sudmitBtn.textContent = "submit";
 }
 // ****** LOCAL STORAGE **********
 function addToLocalStorage(id, value) {
