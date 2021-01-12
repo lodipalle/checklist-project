@@ -43,6 +43,10 @@ function addItem(e) {
     displayAlert("item added to the list", "success");
     // show container
     container.classList.add("show-container");
+    // add to local storage
+    addToLocalStorage(id,value);
+    // set back to default
+    setBackToDefault()
   } else if (value && editFlag) {
     console.log("editing");
   } else {
@@ -60,6 +64,12 @@ function displayAlert(text, action) {
     alert.classList.remove(`alet-${action}`);  
   }, 1000);
 }
+// Set back to default
+function setBackToDefault() {
+  console.log("set back to default");
+}
 // ****** LOCAL STORAGE **********
-
+function addToLocalStorage(id, value) {
+  console.log("added to local storage");
+}
 // ****** SETUP ITEMS **********
