@@ -93,7 +93,7 @@ console.log("item deleted");
 }
 // Edit function
 function editItem() {
-console.log("item edited");  
+console.log("edit item");  
 }
 // Set back to default
 function setBackToDefault() {
