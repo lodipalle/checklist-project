@@ -75,6 +75,10 @@ function clearItems() {
       list.removeChild(item);
     });
   }
+  container.classList.remove("show-container");
+  displayAlert("empty list", "danger");
+  setBackToDefault();
+  // localStorage.removeItem("list");
 }
 // Set back to default
 function setBackToDefault() {
