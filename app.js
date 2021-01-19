@@ -17,8 +17,6 @@ form.addEventListener("submit", addItem);
 // Clear items
 clearBtn.addEventListener("click", clearItems)
 
-
-
 // ****** FUNCTIONS **********
 function addItem(e) {
   e.preventDefault();
@@ -101,7 +99,14 @@ function deleteItem(e) {
 }
 // Edit function
 function editItem() {
-console.log("edit item");  
+  const element = e.currentTarget.parentElement.parentElement;
+  // Set edit item
+  editElement = e.currentTarget.parentElement.
+  previousElementSibling;
+  // Set form value
+  grocery.value = editElement.innerHTML;
+  editFlag = true;
+  editID = element.dataset.id;
 }
 // Set back to default
 function setBackToDefault() {
