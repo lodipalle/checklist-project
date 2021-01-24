@@ -55,7 +55,9 @@ function addItem(e) {
     // set back to default
     setBackToDefault()
   } else if (value && editFlag) {
-    console.log("editing");
+    editElement.innerHTML = value;
+    displayAlert("value changed", "success");
+    setBackToDefault()
   } else {
     displayAlert("please enter value", "danger");
   }
@@ -107,6 +109,7 @@ function editItem() {
   grocery.value = editElement.innerHTML;
   editFlag = true;
   editID = element.dataset.id;
+  submitBtn.textContent = "edit";
 }
 // Set back to default
 function setBackToDefault() {
