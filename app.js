@@ -51,7 +51,7 @@ function addItem(e) {
     // show container
     container.classList.add("show-container");
     // add to local storage
-    addToLocalStorage(id,value);
+    addToLocalStorage(id, value);
     // set back to default
     setBackToDefault()
   } else if (value && editFlag) {
@@ -123,13 +123,20 @@ function setBackToDefault() {
 }
 // ****** LOCAL STORAGE **********
 function addToLocalStorage(id, value) {
+  const grocery = { id, value };
+  console.log(grocery);
   // console.log("added to local storage");
 }
 function removeFromLocalStorage(id) {}
 function editLocalStorage(id, value) {}
-// Local storage API
+// localStorage API
 // setItem
 // getItem
 // removeItem
 // save as strings
+// localStorage.setItem("orange", JSON.stringify(["item", "item2"]
+// ));
+// const oranges = JSON.parse(localStorage.getItem("orange"));
+// console.log(oranges);
+// localStorage.removeItem("orange");
 // ****** SETUP ITEMS **********
