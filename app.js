@@ -57,6 +57,8 @@ function addItem(e) {
   } else if (value && editFlag) {
     editElement.innerHTML = value;
     displayAlert("value changed", "success");
+    // Edit local storage
+    editLocalStorage(editID, value);
     setBackToDefault()
   } else {
     displayAlert("please enter value", "danger");
@@ -76,6 +78,7 @@ function displayAlert(text, action) {
 // clear items
 function clearItems() {
   const items = document.querySelectorAll(".grocery-item");
+
   if (items.length > 0) {
     items.forEach(function (item) {
       list.removeChild(item);
@@ -122,7 +125,11 @@ function setBackToDefault() {
 function addToLocalStorage(id, value) {
   // console.log("added to local storage");
 }
-function removeFromLocalStorage(id) {
-
-}
+function removeFromLocalStorage(id) {}
+function editLocalStorage(id, value) {}
+// Local storage API
+// setItem
+// getItem
+// removeItem
+// save as strings
 // ****** SETUP ITEMS **********
