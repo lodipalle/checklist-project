@@ -125,6 +125,7 @@ function setBackToDefault() {
 function addToLocalStorage(id, value) {
   const grocery = { id, value };
   console.log(grocery);
+  
   // console.log("added to local storage");
 }
 function removeFromLocalStorage(id) {}
