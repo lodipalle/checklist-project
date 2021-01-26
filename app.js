@@ -87,7 +87,7 @@ function clearItems() {
   container.classList.remove("show-container");
   displayAlert("empty list", "danger");
   setBackToDefault();
-  // localStorage.removeItem("list");
+  localStorage.removeItem("list");
 }
 // Delete function
 function deleteItem(e) {
@@ -106,8 +106,7 @@ function deleteItem(e) {
 function editItem() {
   const element = e.currentTarget.parentElement.parentElement;
   // Set edit item
-  editElement = e.currentTarget.parentElement.
-    previousElementSibling;
+  editElement = e.currentTarget.parentElement.previousElementSibling;
   // Set form value
   grocery.value = editElement.innerHTML;
   editFlag = true;
