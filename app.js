@@ -139,7 +139,9 @@ function removeFromLocalStorage(id) {
   });
   localStorage.setItem("list", JSON.stringify(items));
 }
-function editLocalStorage(id, value) { }
+function editLocalStorage(id, value) {
+  let items = getLocalStorage();
+}
 function getLocalStorage() {
   return localStorage.getItem("list")
     ? JSON.parse(localStorage.getItem("list"))
